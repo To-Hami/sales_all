@@ -8,13 +8,18 @@
      <meta name="csrf-token" content="{{ csrf_token() }}">
 
      <title>{{ config('app.name') }}</title>
+
      {{--jquery--}}
-    <script src="{{ asset('admin_assets/js/jquery-3.3.1.min.js') }}"></script>
-    <script src="{{ asset('admin_assets/js/jquery-ui.js') }}"></script>
+        <script src="{{ asset('admin_assets/js/jquery-3.3.1.min.js') }}"></script>
+        <script src="{{ asset('admin_assets/js/jquery-ui.js') }}"></script>
 
     {{-- bootstrab --}}
     <link href="{{ asset('admin_assets/css/bootstrab.min.css') }}" rel="stylesheet">
-
+    <link  href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet"   nonce=" ">
+    <script  src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"   defer></script>
+    {{-- end bootstrab --}}
+    
+    
     <!-- Styles -->
     <link href="{{ asset('admin_assets/css/bootstrab_toggle.min.css') }}" rel="stylesheet">
     <link href="{{ asset('admin_assets/js/bootstrab_toogle.min.js') }}" rel="stylesheet">
