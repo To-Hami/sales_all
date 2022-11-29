@@ -22,7 +22,7 @@ Route::middleware([
             Route::get('/home',[HomeController::class,'index'])->name('home');
 
             //clients
-            // Route::resource('clients',[ClientController::class]);
+             Route::resource('clients', ClientController::class);
 
 
         });
