@@ -2,7 +2,7 @@
     <ul class="menu-items">
         <li><a href="#home"><i class="fas fa-spinner " style="font-size:1.5em ; color:#fff; vertical-align:middle;"></i>
                 Home</a></li>
-        <li><a href="#about"><i class="fas fa-spinner "
+        <li><a href="{{route('admin.clients.index')}}"><i class="fas fa-spinner "
                                 style="font-size:1.5em ; color:#fff; vertical-align:middle;"></i> العملاء</a></li>
         <li><a href="#food"><i class="fas fa-spinner " style="font-size:1.5em ; color:#fff; vertical-align:middle;"></i>
                 Category</a></li>

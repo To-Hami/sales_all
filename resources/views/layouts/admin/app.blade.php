@@ -9,6 +9,13 @@
 
     <title>{{ config('app.name') }}</title>
 
+    {{--jquery cdn --}}
+{{--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"--}}
+{{--            integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="--}}
+{{--            crossorigin="anonymous"--}}
+{{--            referrerpolicy="no-referrer">--}}
+{{--    </script>--}}
+
     {{--    bootstrap--}}
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
@@ -51,9 +58,10 @@
             integrity="sha384-dPBGbj4Uoy1OOpM4+aRGfAOc0W37JkROT+3uynUgTHZCHZNMHfGXsmmvYTffZjYO"
             crossorigin="anonymous"></script>
     {{--noty--}}
+    <link rel="stylesheet" href="{{ asset('admin_assets/plugins/magnific-popup/magnific-popup.css') }}">
     <link rel="stylesheet" href="{{ asset('admin_assets/plugins/noty/noty.css') }}">
     <script src="{{ asset('admin_assets/plugins/noty/noty.min.js') }}"></script>
-    {{-- <script src="{{ asset('admin_assets/css/magnific-popup.css') }}"></script> --}}
+     <script src="{{ asset('admin_assets/plugins/magnific-popup/jquery.magnific-popup.min.js') }}"></script>
 
     {{-- main_css --}}
     <link rel="stylesheet" href="{{ asset('admin_assets/css/main.css')}}">
@@ -517,6 +525,7 @@
     <h6>Powered by rhstudio11.com</h6>
 </div>
 
+{{--jquery cdn --}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
         integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
         crossorigin="anonymous"
@@ -571,72 +580,34 @@
     });
 
     $(document).ready(function () {
+        //delete
 
-        $('.postActionclientapprovetextcheck').bootstrapToggle({
-            on: '<i class="fas fa-check"></i>',
-            off: '<i class="fas fa-times"></i>'
+        $('.delete').click(function (e) {
+            var that = $(this);
+            e.preventDefault();
+            var n = new Noty({
+                text: "هل انت متاكد من عملية الحزف",
+                type: "info",
+                killer: true,
+                buttons: [
+                    Noty.button("نعم", 'btn btn-danger mr-2', function () {
+                        that.closest('form').submit();
+                    }),
+                    Noty.button("لا", 'btn btn-primary mr-2', function () {
+                        n.close();
+                    })
+                ]
+            });
+            n.show();
         });
 
 
-        //delete
-        // $(document).on('click', '.delete, #bulk-delete', function (e) {
+        // $('.postActionclientapprovetextcheck').bootstrapToggle({
+        //     on: '<i class="fas fa-check"></i>',
+        //     off: '<i class="fas fa-times"></i>'
+        // });
 
-        //     var that = $(this)
 
-        //     e.preventDefault();
-
-        //     var n = new Noty({
-        //         text: "@lang('site.confirm_delete')",
-        //         type: "alert",
-        //         killer: true,
-        //         buttons: [
-        //             Noty.button("@lang('site.yes')", 'btn btn-success mr-2', function () {
-        //                 let url = that.closest('form').attr('action');
-        //                 let data = new FormData(that.closest('form').get(0));
-
-        //                 let loadingText = '<i class="fa fa-circle-o-notch fa-spin"></i>';
-        //                 let originalText = that.html();
-        //                 that.html(loadingText);
-
-        //                 n.close();
-
-        //                 $.ajax({
-        //                     url: url,
-        //                     data: data,
-        //                     method: 'post',
-        //                     processData: false,
-        //                     contentType: false,
-        //                     cache: false,
-        //                     success: function (response) {
-
-        //                         $("#record__select-all").prop("checked", false);
-
-        //                         $('.datatable').DataTable().ajax.reload();
-
-        //                         new Noty({
-        //                             layout: 'topRight',
-        //                             type: 'alert',
-        //                             text: response,
-        //                             killer: true,
-        //                             timeout: 2000,
-        //                         }).show();
-
-        //                         that.html(originalText);
-        //                     },
-
-        //                 });//end of ajax call
-
-        //             }),
-
-        //             Noty.button("@lang('site.no')", 'btn btn-danger mr-2', function () {
-        //                 n.close();
-        //             })
-        //         ]
-        //     });
-
-        //     n.show();
-
-        // });//end of delete
 
         //select 2
         // $('.select2').select2({

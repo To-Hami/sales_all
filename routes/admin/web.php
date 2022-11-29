@@ -5,7 +5,6 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use PHPUnit\TextUI\XmlConfiguration\Group;
-use App\Http\Controllers\admin\ClientController;
 
 Route::middleware([
     // 'localeSessionRedirect',
@@ -22,7 +21,9 @@ Route::middleware([
             Route::get('/home',[HomeController::class,'index'])->name('home');
 
             //clients
-             Route::resource('clients', ClientController::class);
+            Route::get('/clients/data', [ClientController::class,'data'])->name('clients.data');
+            Route::delete('/clients/bulk_delete', [ClientController::class,'bulkDelete'])->name('clients.bulk_delete');
+            Route::resource('clients', ClientController::class);
 
 
         });

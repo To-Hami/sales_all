@@ -14,7 +14,7 @@ return new class extends Migration {
             $table->string('name');
             $table->string('email')->unique()->nullable();
             $table->integer('id_number')->unique();
-            $table->enum('statues', ['vip', 'normal']);
+            $table->string('statues');
             $table->string('mobile')->unique();
             $table->string('company_name');
             $table->string('location');
@@ -26,9 +26,9 @@ return new class extends Migration {
             $table->string('total_expectation')->nullable();
             $table->string('total_sales')->nullable();
             $table->string('total_refund')->nullable();
-            $table->string('created_by');
+            $table->string('created_by')->nullable();
 
-            $table->unsignedBigInteger('user_id')->unsigned();
+            $table->unsignedBigInteger('user_id')->unsigned()->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
             $table->timestamps();
