@@ -9,23 +9,31 @@
 
     <title>{{ config('app.name') }}</title>
 
-    {{--jquery--}}
-    <script src="{{ asset('admin_assets/js/jquery-3.3.1.min.js') }}"></script>
-    <script src="{{ asset('admin_assets/js/jquery-ui.js') }}"></script>
+    {{--    bootstrap--}}
 
-    {{-- bootstrab --}}
-    <link href="{{ asset('admin_assets/css/bootstrab.min.css') }}" rel="stylesheet">
-    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet"
-          nonce=" ">
-    <script src="{{ asset('admin_assets/js/bootstrap.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+            integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+            crossorigin="anonymous"></script>
 
-    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js" defer></script>
-    {{-- end bootstrab --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+          crossorigin="anonymous">
 
+{{--    jquery--}}
 
-<!-- Styles -->
-    <link href="{{ asset('admin_assets/css/bootstrab_toggle.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('admin_assets/js/bootstrab_toogle.min.js') }}" rel="stylesheet">
+    <script
+        src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+        crossorigin="anonymous"></script>
+    <script
+        src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
+        integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c="
+        crossorigin="anonymous"></script>
+    <!-- Styles -->
+
     <link rel="stylesheet" type="text/css" href="{{ asset('admin_assets/css/font-awesome.min.css') }}">
 
     {{-- ajax --}}
@@ -51,14 +59,14 @@
     <link rel="stylesheet" href="{{ asset('admin_assets/css/main.css')}}">
 
     {{-- datatable --}}
-{{--     <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>--}}
+    {{--     <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>--}}
 
 
 
     {{-- css style --}}
     <style>
         body {
-            direction: ltr !important
+            direction: rtl !important
         }
 
         :root {
@@ -448,7 +456,7 @@
         <li><a href="#home"><i class="fas fa-spinner " style="font-size:1.5em ; color:#fff; vertical-align:middle;"></i>
                 Home</a></li>
         <li><a href="#about"><i class="fas fa-spinner "
-                                style="font-size:1.5em ; color:#fff; vertical-align:middle;"></i> About</a></li>
+                                style="font-size:1.5em ; color:#fff; vertical-align:middle;"></i> العملاء</a></li>
         <li><a href="#food"><i class="fas fa-spinner " style="font-size:1.5em ; color:#fff; vertical-align:middle;"></i>
                 Category</a></li>
         <li><a href="#food-menu"><i class="fas fa-spinner "
@@ -481,25 +489,36 @@
         </ul>
     </div>
     <div class="d-flex ml-auto">
-        <span class="w-100 d-lg-none d-block"> </span>
-        <span class="navbar-brand ">
+{{--        <span class="w-100 d-lg-none d-block"> </span>--}}
+{{--        <span class="navbar-brand ">--}}
 
-              <img src="{{asset('admin_assets/images/mktabeeLogo.svg')}}"
-                   alt="mktabeeLogo"
-                   class="brandRLogo "/>
+{{--              <img src="{{asset('admin_assets/images/mktabeeLogo.svg')}}"--}}
+{{--                   alt="mktabeeLogo"--}}
+{{--                   class="brandRLogo "/>--}}
 
-         </span>
+{{--         </span>--}}
         {{--user menu--}}
-
-
-                    <a class="dropdown-item" href="page-login.html" href="{{ route('logout') }}"
-                       onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                        <i class="fa fa-sign-out fa-lg"></i>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#"
+               id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                    <a class="dropdown-item" href="page-login.html" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                        <i class=""></i>
                         @lang('site.logout')
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
                     </a>
+                </li>
+            </ul>
+        </li>
+
+
 
 
     </div>
