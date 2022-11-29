@@ -12,7 +12,7 @@ Route::middleware([
     // 'localizationRedirect',
     // 'localeViewPath',
     'auth',
-     'role:admin|super_admin'
+//     'role:admin|super_admin'
     ])
     ->group(function(){
         Route::name('admin.')->prefix('admin')->group(function(){
