@@ -5,6 +5,7 @@ use App\Http\Controllers\admin\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use PHPUnit\TextUI\XmlConfiguration\Group;
+use App\Http\Controllers\admin\ClientController;
 
 Route::middleware([
     // 'localeSessionRedirect',
@@ -15,12 +16,13 @@ Route::middleware([
     ])
     ->group(function(){
         Route::name('admin.')->prefix('admin')->group(function(){
-              
 
-            //home 
+
+            //home
             Route::get('/home',[HomeController::class,'index'])->name('home');
 
-            //admin
+            //clients
+            Route::resource('clients',[ClientController::class]);
 
 
         });
