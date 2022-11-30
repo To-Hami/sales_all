@@ -1,13 +1,13 @@
-	
-	
+
+
 	body{direction:rtl !important}
 	:root{
         --main: darkred;
         --second: #a81584;
         --third: #a31985;
 		}
-		
-        
+
+
 .w-100{width:100% !important}
 .w-96{width:96% !important}
 .w-90{width:90% !important}
@@ -31,7 +31,7 @@
 .w-15{width:15% !important}
 .w-14{width:14% !important}
 .w-12{width:12% !important}
-.w-10{width:10% !important} 
+.w-10{width:10% !important}
 .w-9{width:9% !important}
 .w-8{width:8% !important}
 .w-7{width:7% !important}
@@ -42,7 +42,7 @@
 .w-2{width:2% !important}
 .w-1{width:1% !important}
 
-		
+
 .btn-gen{color:#fff; background:var(--main); transition:all 0.3s ease }
 .btn-gen:hover{color:#fff; background:rgba(81,81,81,0.95) }
 .btn-gen:active{color:#fff; background:var(--third); }
@@ -62,7 +62,7 @@ table{margin : 0 auto !important;}
         border-top: 0px solid #dee2e6;
 		text-align:center;
     }
- 
+
 
 
 .table  >tbody> tr>td   { transition: all 2s ease;    vertical-align: middle;
@@ -73,56 +73,56 @@ table{margin : 0 auto !important;}
 .table thead th     {
 background-color:  var(--main);color:white;
 }
- 
+
 .table-striped > tbody > tr:nth-child(2n+1)  {
-background-color: rgba(207, 204, 204, 0.1);color: red; 
+background-color: rgba(207, 204, 204, 0.1);color: red;
 }
- 
-.table-hover> tbody> tr>td { 
+
+.table-hover> tbody> tr>td {
  background-color: #fff !important;
  transition: all 0.3s ease;     vertical-align: middle;
- border-bottom: 2px solid rgba(51,51,51,0); 
+ border-bottom: 2px solid rgba(51,51,51,0);
 }
 
 .table-hover> tbody> tr> td:hover{
-color:var(--second); 	
+color:var(--second);
 transition: all 0.3s ease;
-border-bottom: 2px solid var(--main); 
+border-bottom: 2px solid var(--main);
 }
 
-.trHoverda ::after { 
+.trHoverda ::after {
 content: "";
-background-color: var(--second);  position :absolute ; left:0 ;  height:1%;width:1%; 
+background-color: var(--second);  position :absolute ; left:0 ;  height:1%;width:1%;
 }
 
 
 
 
- 
- 
 
- 
+
+
+
 .navbar{  padding: 0 20px ;box-shadow: 0 1px 26px 0 rgb(0 0 0 / 20%), 0 1px 20px 0 rgb(0 0 0 / 5%);
 }
- 
+
  ul li {
-      padding-left: 0 !important;  
+      padding-left: 0 !important;
      padding-right: 0 !important;  display:inline;
 }
 
 .avatarBar{width:35px; border-radius:50%;  object-fit: cover;height:35px;}
 .brandRLogo{height:35px;margin:0 0.25em}
 .brandRLogoCompany{height:35px;margin:0 0.25em;  }
-		
-.userNameAvatar{  align-items: center;} 
-.userNameAvatar span{font-size:1.1em; font-weight:bold; margin:0 0.30em; color:rgba(81,81,81,0.95);} 
+
+.userNameAvatar{  align-items: center;}
+.userNameAvatar span{font-size:1.1em; font-weight:bold; margin:0 0.30em; color:rgba(81,81,81,0.95);}
 
 .navbar div ul{margin:0 15px 0 0 ; padding:0}
 
 .noDecor{text-decoration:none}
  .appfooter{width:100%;padding:10px;background:var(--main); text-align:right;color:#fff;font-weight: 400;}
- 
- .menu{ 
+
+ .menu{
  display:none;
  z-index:999;
  background-color: var(--main);
@@ -130,13 +130,13 @@ background-color: var(--second);  position :absolute ; left:0 ;  height:1%;width
     position: absolute;
     width: 250px;
 height:100%	}
-	
+
 	.menu .menu-items li{ transition:all 0.3s ease}
 	.menu ul li{display: block; margin:15px 0px 0 0; transition:all 0.3s ease}
 	.menu ul li a {text-decoration:none ; font-size:1.15em ; font-weight:450 ;color: #fff; transition:all 0.3s ease}
 	.menu ul {margin:50px 10px 0 0; padding:0}
-	
-	
+
+
  .toggles {
 position: absolute;
     width: 40px;

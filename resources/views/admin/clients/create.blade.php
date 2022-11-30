@@ -31,9 +31,13 @@
 
             <div class="form-group">
                 <label> الحالة</label>
-                <input type="text" class="form-control"
-                       name="statues"
-                       value="{{old('statues')}}">
+                <select name="statues" class="form-control">
+                    <option value=""> Select Status</option>
+
+                    <option value="normal" {{old('statues') == 'normal' ? 'selected' : ''}}> Normal</option>
+                    <option value="vip" {{old('statues') == 'vip'? 'selected' : ''}}>vip</option>
+
+                </select>
             </div>
 
             <div class="form-group">
@@ -59,7 +63,7 @@
 
             <div class="form-group">
                 <label> رقم الايبان</label>
-                <input type="text" class="form-control"
+                <input type="number" class="form-control"
                        name="iban"
                        value="{{old('iban')}}">
             </div>
@@ -105,6 +109,10 @@
                 <input type="number" class="form-control"
                        name="total_refund"
                        value="{{old('total_refund')}}">
+
+                <input type="hidden" class="form-control"
+                       name="created_by"
+                       >
             </div>
 
             <div class="form-group">

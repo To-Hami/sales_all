@@ -12,7 +12,7 @@ class ClientController extends Controller
 {
 
     public function data(){
-        $clients = Client::query();
+        $clients = Client::select();
 
         return DataTables::of($clients)
             ->addColumn('actions', 'admin.clients.data_table.actions')
@@ -21,7 +21,7 @@ class ClientController extends Controller
     }
     public function index()
     {
-        $clients = Client::all();
+        $clients = Client::paginate(4);
         return view('admin.clients.index',compact('clients'));
     }
 
@@ -32,7 +32,9 @@ class ClientController extends Controller
 
     public function store(ClientRequest $request)
     {
-        Client::create($request->all());
+        Client::create($request->validated());
+        session()->flash('success', __('تمت اضافة البيانات بنجاح'));
+
         return redirect()->route('admin.clients.index');
     }
 
@@ -43,7 +45,9 @@ class ClientController extends Controller
 
     public function update(ClientRequest $request ,Client $client)
     {
-        $client->update($request->all());
+        $client->update($request->validated());
+        session()->flash('success', __('تم تعديل البيانات بنجاح'));
+
         return redirect()->route('admin.clients.index');
 
     }
@@ -56,7 +60,14 @@ class ClientController extends Controller
     public function destroy(Client $client)
     {
         $client->delete();
+        session()->flash('success', __('تم حزف البيانات بنجاح'));
+
         return redirect()->route('admin.clients.index');
 
+    }
+
+    public function archive(){
+        $clients = Client::onlyTrashed()->paginate(5);
+        return view('admin.clients.archive',compact('clients'));
     }
 }

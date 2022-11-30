@@ -6,31 +6,21 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <title>{{ config('app.name') }}</title>
 
-    {{--jquery cdn --}}
-{{--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"--}}
-{{--            integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="--}}
-{{--            crossorigin="anonymous"--}}
-{{--            referrerpolicy="no-referrer">--}}
-{{--    </script>--}}
-
-    {{--    bootstrap--}}
-
+{{--    bootstrap--}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
             crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
             integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
             crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
           integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
           crossorigin="anonymous">
 
-{{--    jquery--}}
 
+{{--    jquery--}}
     <script
         src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
@@ -39,8 +29,8 @@
         src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
         integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c="
         crossorigin="anonymous"></script>
-    <!-- Styles -->
 
+    <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="{{ asset('admin_assets/css/font-awesome.min.css') }}">
 
     {{-- ajax --}}
@@ -48,15 +38,14 @@
             integrity="sha512-DmxN+h4rvEbHxmkzhxEA1krRvgdzSFhjkcTe2HCZpd5ZnxP9+OWGHB8iMUQhvidmrivCTe3g0hyeMpfTLIwf7Q=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-
-    {{-- fontawsam --}}
-
+    {{-- fontawesome --}}
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/solid.js"
             integrity="sha384-/BxOvRagtVDn9dJ+JGCtcofNXgQO/CCCVKdMfL115s3gOgQxWaX/tSq5V8dRgsbc"
             crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/fontawesome.js"
             integrity="sha384-dPBGbj4Uoy1OOpM4+aRGfAOc0W37JkROT+3uynUgTHZCHZNMHfGXsmmvYTffZjYO"
             crossorigin="anonymous"></script>
+
     {{--noty--}}
     <link rel="stylesheet" href="{{ asset('admin_assets/plugins/magnific-popup/magnific-popup.css') }}">
     <link rel="stylesheet" href="{{ asset('admin_assets/plugins/noty/noty.css') }}">
@@ -67,386 +56,7 @@
     <link rel="stylesheet" href="{{ asset('admin_assets/css/main.css')}}">
 
     {{-- datatable --}}
-    {{--     <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>--}}
-
-
-
-    {{-- css style --}}
-    <style>
-        body {
-            direction: rtl !important
-        }
-
-        :root {
-            --main: darkred;
-            --second: #a81584;
-            --third: #a31985;
-        }
-
-
-        .w-100 {
-            width: 100% !important
-        }
-
-        .w-96 {
-            width: 96% !important
-        }
-
-        .w-90 {
-            width: 90% !important
-        }
-
-        .w-80 {
-            width: 80% !important
-        }
-
-        .w-70 {
-            width: 70% !important
-        }
-
-        .w-60 {
-            width: 60% !important
-        }
-
-        .w-54 {
-            width: 54% !important
-        }
-
-        .w-50 {
-            width: 50% !important
-        }
-
-        .w-49 {
-            width: 49% !important
-        }
-
-        .w-48 {
-            width: 48% !important
-        }
-
-        .w-44 {
-            width: 44% !important
-        }
-
-        .w-40 {
-            width: 40% !important
-        }
-
-        .w-32 {
-            width: 32% !important
-        }
-
-        .w-30 {
-            width: 30% !important
-        }
-
-        .w-25 {
-            width: 25% !important
-        }
-
-        .w-24 {
-            width: 24% !important
-        }
-
-        .w-22 {
-            width: 22% !important
-        }
-
-        .w-20 {
-            width: 20% !important
-        }
-
-        .w-18 {
-            width: 18% !important
-        }
-
-        .w-16 {
-            width: 16% !important
-        }
-
-        .w-15 {
-            width: 15% !important
-        }
-
-        .w-14 {
-            width: 14% !important
-        }
-
-        .w-12 {
-            width: 12% !important
-        }
-
-        .w-10 {
-            width: 10% !important
-        }
-
-        .w-9 {
-            width: 9% !important
-        }
-
-        .w-8 {
-            width: 8% !important
-        }
-
-        .w-7 {
-            width: 7% !important
-        }
-
-        .w-6 {
-            width: 6% !important
-        }
-
-        .w-5 {
-            width: 5% !important
-        }
-
-        .w-4 {
-            width: 4% !important
-        }
-
-        .w-3 {
-            width: 3% !important
-        }
-
-        .w-2 {
-            width: 2% !important
-        }
-
-        .w-1 {
-            width: 1% !important
-        }
-
-
-        .btn-gen {
-            color: #fff;
-            background: var(--main);
-            transition: all 0.3s ease
-        }
-
-        .btn-gen:hover {
-            color: #fff;
-            background: rgba(81, 81, 81, 0.95)
-        }
-
-        .btn-gen:active {
-            color: #fff;
-            background: var(--third);
-        }
-
-        table {
-            margin: 0 auto !important;
-        }
-
-        tbody {
-            border: 2px solid rgba(51, 51, 51, 0);
-        }
-
-        .table th {
-            padding: .60rem;
-            vertical-align: middle;
-            border-top: 0px solid #dee2e6;
-            text-align: center;
-        }
-
-        .table td {
-            padding: .75rem;
-            vertical-align: middle;
-            border-top: 0px solid #dee2e6;
-            text-align: center;
-        }
-
-
-        .table > tbody > tr > td {
-            transition: all 2s ease;
-            vertical-align: middle;
-        }
-
-        .table > tbody > tr > td:hover {
-            transition: all 2s ease;
-        }
-
-        .table thead th {
-            background-color: var(--main);
-            color: white;
-        }
-
-        .table-striped > tbody > tr:nth-child(2n+1) {
-            background-color: rgba(207, 204, 204, 0.1);
-            color: red;
-        }
-
-        .table-hover > tbody > tr > td {
-            background-color: #fff !important;
-            transition: all 0.3s ease;
-            vertical-align: middle;
-            border-bottom: 2px solid rgba(51, 51, 51, 0);
-        }
-
-        .table-hover > tbody > tr > td:hover {
-            color: var(--second);
-            transition: all 0.3s ease;
-            border-bottom: 2px solid var(--main);
-        }
-
-        .trHoverda ::after {
-            content: "";
-            background-color: var(--second);
-            position: absolute;
-            left: 0;
-            height: 1%;
-            width: 1%;
-        }
-
-
-        .navbar {
-            padding: 0 20px;
-            box-shadow: 0 1px 26px 0 rgb(0 0 0 / 20%), 0 1px 20px 0 rgb(0 0 0 / 5%);
-        }
-
-        ul li {
-            padding-left: 0 !important;
-            padding-right: 0 !important;
-            display: inline;
-        }
-
-        .avatarBar {
-            width: 35px;
-            border-radius: 50%;
-            object-fit: cover;
-            height: 35px;
-        }
-
-        .brandRLogo {
-            height: 35px;
-            margin: 0 0.25em
-        }
-
-        .brandRLogoCompany {
-            height: 35px;
-            margin: 0 0.25em;
-        }
-
-        .userNameAvatar {
-            align-items: center;
-        }
-
-        .userNameAvatar span {
-            font-size: 1.1em;
-            font-weight: bold;
-            margin: 0 0.30em;
-            color: rgba(81, 81, 81, 0.95);
-        }
-
-        .navbar div ul {
-            margin: 0 15px 0 0;
-            padding: 0
-        }
-
-        .noDecor {
-            text-decoration: none
-        }
-
-        .appfooter {
-            width: 100%;
-            padding: 10px;
-            background: var(--main);
-            text-align: right;
-            color: #fff;
-            font-weight: 400;
-        }
-
-        .menu {
-            display: none;
-            z-index: 999;
-            background-color: var(--main);
-            top: 45px;
-            position: absolute;
-            width: 250px;
-            height: 100%;
-            left:
-        }
-
-        .menu .menu-items li {
-            transition: all 0.3s ease
-        }
-
-        .menu ul li {
-            display: block;
-            margin: 15px 0px 0 0;
-            transition: all 0.3s ease
-        }
-
-        .menu ul li a {
-            text-decoration: none;
-            font-size: 1.15em;
-            font-weight: 450;
-            color: #fff;
-            transition: all 0.3s ease
-        }
-
-        .menu ul {
-            margin: 50px 10px 0 0;
-            padding: 0
-        }
-
-
-        .toggles {
-            position: absolute;
-            width: 40px;
-            height: 40px;
-            background: #fff;
-            box-shadow: 0 10px 20px rgb(0 0 0 / 8%);
-            border-radius: 5px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            z-index: 9999;
-            top: 50px;
-            right: 10px;
-        }
-
-        .toggles span {
-            position: absolute;
-            width: 30px;
-            height: 4px;
-            border-radius: 4px;
-            background: var(--main);
-            transition: 0.3s;
-        }
-
-        .toggles span:nth-child(2) {
-            transform: translateY(-15px);
-            width: 25px;
-            left: 10px;
-        }
-
-        .toggles span:nth-child(3) {
-            transform: translateY(15px);
-            width: 27px;
-            left: 10px;
-        }
-
-        .toggles.active span:nth-child(1) {
-            transform: translateX(60px);
-        }
-
-        .toggles.active span:nth-child(2) {
-            width: 20px;
-            transform: translateX(0) rotate(45deg);
-            transition-delay: 0.2s;
-        }
-
-        .toggles.active span:nth-child(3) {
-            width: 20px;
-            transform: translateX(0) rotate(-45deg);
-            transition-delay: 0.4s;
-        }
-    </style>
-
-
-    {{-- end css style --}}
-
+         <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
 
 </head>
 
@@ -493,7 +103,7 @@
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#"
                id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
+                {{auth()->user()->name}}
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="#">Action</a></li>
@@ -517,7 +127,7 @@
 </nav>
 
 {{-- content --}}
-{{-- @include('admin.partials._session') --}}
+ @include('admin.partials._session')
 @yield('content')
 
 {{--footer--}}

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admin\ClientController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -22,6 +23,7 @@ Route::middleware([
 
             //clients
             Route::get('/clients/data', [ClientController::class,'data'])->name('clients.data');
+            Route::get('/clients/archive', [ClientController::class,'archive'])->name('clients.archive');
             Route::delete('/clients/bulk_delete', [ClientController::class,'bulkDelete'])->name('clients.bulk_delete');
             Route::resource('clients', ClientController::class);
 
